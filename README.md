@@ -1,31 +1,14 @@
 [ ![Codeship Status for Hobo/hobo](https://codeship.com/projects/6dd714c0-6cd7-0132-7429-3a463caf9dbd/status?branch=master)](https://codeship.com/projects/54101)
 
-The README for hobo is in hobo/README.md
+## Welcome to Hobo
+Hobo is an Open Source extension to Ruby on Rails which helps you build full blown web applications incredibly quickly and easily. Available as a Gem or Rails plugin, Hobo provides a simple, clean and elegant development framework which allows for rapid prototyping or production of the most sophisticated web applications.
 
-However, if youre reading this, you'll probably be more interested in 
-hobo/CHANGES-2.1.md or [Hobo Central](http://cookbook.hobocentral.net)
+## Main Features
 
-### Unit tests
+* Rapid implementation of dynamic Ajax interfaces in your application with no extra programming.
+* Switchable themes. Customise and tweak your application structure and layout to meet any design goals.
+* Powerful mark-up language, DRYML, combines rapid development with ultimate design flexibility. The end of the cookie cutter blues!
 
-    export HOBODEV=`pwd`
-    for f in dryml hobo_support hobo_fields hobo ; do cd $f ; bundle install ; cd .. ; done
-    rake test
-    unset HOBODEV
+## RDOC Note
 
-### Integration tests
-
-See integration\_tests/agility\_bootstrap/README.md for details
-
-### Smoke test
-
-This test is not super important. It's important that this test be run
-just before gems are released, but we won't see much benefit if people
-other than the maintainer run this test.
-
-Prerequisites:  RVM, wget.   Creates and uses the hobo-smoke rvm gemset.
-
-    unset HOBODEV
-    export HOBODEV
-    cd integration_tests
-    ./smoke_test.sh
-
+This is also the front page to the Hobo RDOC.  RDOC is not the main documentation method for Hobo.  See [hobocentral](http://cookbook.hobocentral.net) for the Hobo documentation.
