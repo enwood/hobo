@@ -180,7 +180,12 @@ module HoboRapidHelper
           page_path = if params[:page_path]
                         params[:page_path]
                       else
-                        request.fullpath
+                        # Hobo Issue 193
+                        if request.query_string.present?
++                         "#{request.path_info}?#{request.query_string}"
++                       else
++                         "#{request.path_info}"
++                       end                      
                       end
           page_path_hidden = hidden_field_tag("page_path", page_path)
         end
