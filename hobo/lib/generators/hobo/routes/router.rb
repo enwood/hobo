@@ -99,7 +99,7 @@ module Generators
         def owner_actions
           controller.owner_actions.map do |owner, actions|
             collection_refl = model.reverse_reflection(owner)
-            raise ::Hobo::Error, "Hob routing error -- can't find reverse association for #{model}##{owner} " +
+            raise ::Hobo::Error, "Hobo routing error -- can't find reverse association for #{model}##{owner} " +
                              "(e.g. the :has_many that corresponds to a :belongs_to)" if collection_refl.nil?
             collection         = collection_refl.name
             owner_class        = model.reflections[owner.to_s].klass.name.underscore
@@ -164,7 +164,7 @@ module Generators
           routes = []
           controller.owner_actions.each_pair do |owner, actions|
             collection_refl = model.reverse_reflection(owner)
-            raise ::Hobo::Error, "Hob routing error -- can't find reverse association for #{model}##{owner} " +
+            raise ::Hobo::Error, "Hobo routing error -- can't find reverse association for #{model}##{owner} " +
                              "(e.g. the :has_many that corresponds to a :belongs_to)" if collection_refl.nil?
             collection         = collection_refl.name
             owner_class        = model.reflections[owner.to_s].klass.name.underscore
